@@ -8,14 +8,44 @@ namespace Collections23e
 {
     public class Player
     {
-		private int myVar;
 
-		public int MyProperty
+		//instance fields
+		private int _id;
+        private string _type;
+        private string _name;
+
+
+		//properties
+        public int Id
 		{
-			get { return myVar; }
-			set { myVar = value; }
+			get { return _id; }
 		}
 
+		public string Name
+		{
+			get { return _name; }
+			set { _name = value; }
+		}
 
-	}
+		public string Type
+		{
+			get { return _type; }
+			set { _type = value; }
+		}
+
+		//constructor
+        public Player(int id, string type, string name)	
+        {
+			_id = id;
+			_type = type;
+			_name = name;
+        }
+
+        //methods	
+
+        public override string ToString()
+        {
+            return $"Id {_id} Name {_name} Type {_type}";
+        }
+    }
 }
