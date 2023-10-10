@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace Collections23e
 {
+
+    public enum PlayerType { Warrior, Mage, Sorcerer, Cleric }
+
     public class Player
     {
-
-		//instance fields
-		private int _id;
-        private string _type;
+       
+        //instance fields
+        private int _id;
+        private PlayerType _type;
         private string _name;
 
 
@@ -27,14 +30,14 @@ namespace Collections23e
 			set { _name = value; }
 		}
 
-		public string Type
+		public PlayerType Type
 		{
 			get { return _type; }
 			set { _type = value; }
 		}
 
 		//constructor
-        public Player(int id, string type, string name)	
+        public Player(int id, PlayerType type, string name)	
         {
 			_id = id;
 			_type = type;

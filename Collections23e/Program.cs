@@ -19,11 +19,11 @@ using Collections23e;
 //    Console.Write(item + " ");
 //}
 
-Player p1 = new Player(1, "Warrior", "Fnuggi");
-Player p2 = new Player(2, "Hunter", "Huggi");
+Player p1 = new Player(1, PlayerType.Warrior, "Fnuggi");
+Player p2 = new Player(2, PlayerType.Cleric, "Huggi");
 
 
-List<Player> players  = new List<Player>() { p1, p2, new Player(3, "Mage", "Muggi")};
+List<Player> players  = new List<Player>() { p1, p2, new Player(3, PlayerType.Mage, "Muggi")};
 
 Console.WriteLine( players[2].Name );
 
@@ -35,7 +35,7 @@ foreach( Player p in players )
 }
 
 
-Player p4 = new Player(4, "Gambler", "Gummi");
+Player p4 = new Player(4, PlayerType.Sorcerer, "Gummi");
 players.Add( p4 );
 
 //players.Add( new Player(5, "Sailor", "Summi"));
@@ -82,7 +82,7 @@ foreach (string name in playerNames.Keys)
 }
 
 if ( !playerNames.ContainsKey("Fnuggi") )
-    playerNames.Add("Fnuggi", new Player(34, "Fighter", "Figgi") );
+    playerNames.Add("Fnuggi", new Player(34, PlayerType.Mage, "Figgi") );
 
 
 
